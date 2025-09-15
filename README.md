@@ -131,3 +131,94 @@ Reliability (TCP vs UDP choice, retries).
 Scalability (Load Balancers, CDNs, Caching).
 
 Data flow (e.g., “User enters URL → DNS → TCP Handshake → HTTP Request”).
+
+
+/////////////////////////////////////////////////
+📂 FTP and Networking Protocols
+1. 🔹 What is FTP?
+
+FTP (File Transfer Protocol) is one of the oldest protocols used to transfer files between client and server over a network.
+
+Works on Application Layer (Layer 7 of OSI).
+
+Uses TCP ports 21 (command) and 20 (data transfer).
+
+Examples: Uploading/downloading files from a server.
+
+2. 🔐 Is FTP Secure?
+
+Plain FTP is not secure – it sends username, password, and data in plain text.
+
+Anyone sniffing the network (via Wireshark, tcpdump, etc.) can capture credentials and files.
+
+Secure Alternatives:
+
+FTPS (FTP Secure / FTP-SSL)
+
+Adds SSL/TLS encryption to FTP.
+
+Works on same ports but with encryption.
+
+SFTP (SSH File Transfer Protocol)
+
+Not FTP at all → It’s built on SSH (port 22).
+
+Provides secure authentication & encryption.
+
+Commonly used in enterprises.
+
+👉 Interview Tip: If asked “Is FTP secure?” → Answer: No, plain FTP is insecure. Use FTPS or SFTP for secure file transfer.
+
+3. 📡 How Many Networking Protocols Are There?
+
+There are hundreds of protocols, but for Networking + HLD/LLD interviews, focus on the core ones:
+
+🔸 Application Layer Protocols
+
+HTTP / HTTPS – Web communication.
+
+FTP / FTPS / SFTP – File transfer.
+
+SMTP, IMAP, POP3 – Email.
+
+DNS – Domain name resolution.
+
+DHCP – Dynamic IP assignment.
+
+SNMP – Network monitoring.
+
+🔸 Transport Layer Protocols
+
+TCP – Reliable, connection-based.
+
+UDP – Fast, connectionless.
+
+🔸 Network Layer Protocols
+
+IP (IPv4, IPv6) – Addressing & routing.
+
+ICMP – Error reporting, ping.
+
+ARP – Maps IP → MAC address.
+
+🔸 Security Protocols
+
+SSL/TLS – Encryption for HTTPS, FTPS, IMAPs, etc.
+
+IPSec – VPNs, secure tunneling.
+
+SSH – Secure shell, also basis for SFTP.
+
+4. 🧩 Quick Recap
+
+FTP → Old, insecure → prefer SFTP or FTPS.
+
+Protocols → Too many, but interviews care about:
+
+HTTP/HTTPS, TCP/UDP, DNS, DHCP, FTP/SFTP, SMTP/IMAP, IP, ICMP, ARP.
+
+Always map protocols to OSI layers in your answers.
+
+
+
+
